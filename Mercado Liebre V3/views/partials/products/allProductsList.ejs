@@ -1,0 +1,19 @@
+<section class="container products-list_wrapper">
+    <div class="row">
+        <% for(let product of products) { %>
+            <article class="col-12 col-md-6 col-lg-3">
+                <section class="product-box">
+                    <a href="/products/detail/<%=product.id%>" class="product-box_link-detail">
+                        <img src="/images/products/<%=product.image%>" alt="no se carga">
+                        <i class="fas fa-truck"></i>
+                        <div class="price-info">
+                            <h2 class="product-box_price-info_price">$<%=product.price%></h2>
+                            <h3 class="product-box_price-info_discont"><%=product.discount%>% OFF</h3>
+                        </div>
+                    </a>
+                </section>
+            </article>   
+        <% } %>
+    </div>
+</section>
+

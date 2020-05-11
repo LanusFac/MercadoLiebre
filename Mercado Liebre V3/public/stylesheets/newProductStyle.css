@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+header {
+    background-color: #EAC926;
+    padding-bottom: 7px;
+}
+
+
+header .main-nav_header-options {
+    display: none;
+}
+
+
+header .container .main-nav_header,
+header .container .main-nav_header-options {
+    align-items: center;
+    padding-top: 15px;
+
+}
+
+
+
+.logo {
+    justify-content: flex-start;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-form_input {
+    width: 100%;
+    padding: 7px 7px 7px 7px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-form_button {
+    position: absolute;
+    right: 2px;
+    border: none;
+    border-left: 1px solid wheat;
+    background-color: white;
+    padding: 5px;
+}
+
+.main-header_credit-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+header .btn-toggle-navbar {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px;
+    color: white;
+    background-color: darkblue;
+    border: none;
+    border-radius: 6px;
+}
+
+.main-nav_credit-link {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+body .container .row {
+    justify-content: center;
+}
+
+
+
+body .container .row .campos-formulario form div{
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: white;
+}
+
+footer.container {
+    margin-top: 80px;
+    padding-top: 40px;
+    margin: 0px;
+    max-width: 100%;
+    padding: 0;
+}
+
+footer.container .row {
+    justify-content: center;
+    padding-top: 30px;
+    margin: 15px 10px;
+}
+
+
+footer.container .row div h1,
+footer.container .row div p {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+footer.container .row div h1 {
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer.container .row div p {
+    font-size: 15px;
+}
+
+footer.container .row div i {
+    display: flex;
+    justify-content: center;
+    color: blue;
+    position: relative;
+    font-size: 50px;
+}
+
+.copy-right p {
+    border: none;
+    border-top: 1px solid grey;
+    font-size: 10px;
+    padding: 5px;
+}
+
+
+
+@media (min-width: 768px) {
+    header .btn-toggle-navbar {
+      display: none;
+    }
+
+    header .main-nav_header-options {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    
+    header .main-nav_header-options .main-nav_header-options_products {
+        list-style: none;
+    }
+    
+    header .main-nav_header-options .main-nav_header-options_products li {
+        display: inline-block;
+        padding: 0px 5px;
+    }
+
+    header .main-nav_header-options .main-nav_header-options_products li a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .main-nav_header-options .main-nav_header-options_account {
+        list-style: none;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .main-nav_header-options .main-nav_header-options_account li {
+        display: inline;
+        padding: 0px 5px;
+    }
+
+    .main-nav_header-options .main-nav_header-options_account li a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+@media (min-width: 992px) {
+    footer.container .row {
+        padding-top: 30px;
+        margin: 15px 40px;
+    }
+}

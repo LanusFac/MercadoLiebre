@@ -1,0 +1,44 @@
+<section class="container products-list_wrapper">
+
+    <h2 class="products-list_title">Basado en tu ultima visita</h2>
+    <div class="row">
+        <% for(let product of products) { %>
+            <% if(product.category == "visited") { %>
+                <article class="col-12 col-md-6 col-lg-3">
+                    <section class="product-box">
+                        <a href="/products/detail/<%=product.id%>" class="product-box_link-detail">
+                        <img src="/images/products/<%=product.image%>" alt="no se carga">
+                            <i class="fas fa-truck"></i>
+                            <div class="price-info">
+                                <h2 class="product-box_price-info_price">$<%=product.price%></h2>
+                                <h3 class="product-box_price-info_discont"><%=product.discount%>% OFF</h3>
+                            </div>
+                        </a>
+                    </section>
+                </article>   
+            <% } %>
+        <% } %>
+    </div>
+
+    <h2 class="products-list_title">Ofertas</h2>
+    <div class="row">
+        <% for(let product of products) { %>
+            <% if(product.category == "in-sale") { %>
+                <article class="col-12 col-md-6 col-lg-3">
+                    <section class="product-box">
+                        <a href="/products/detail/<%=product.id%>" class="product-box_link-detail">
+                            <img src="/images/products/<%=product.image%>" alt="no se carga">
+                            <i class="fas fa-truck"></i>
+                            <div class="price-info">
+                                <h2 class="product-box_price-info_price">$<%=product.price%></h2>
+                                <h3 class="product-box_price-info_discont"><%=product.discount%>% OFF</h3>
+                            </div>
+                        </a>
+                    </section>
+                </article>   
+            <% } %>
+        <% } %>
+    </div>
+
+</section>
+

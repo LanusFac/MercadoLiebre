@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/detail/head") %>
+
+<body>
+    <%- include("./partials/index/header") %>
+
+    <div class="container product-wrapper">
+        <sec class="row">
+            <article class="col-12 container">
+                <h2><%=product.name%></h2>
+                <section class="row product-box">
+                    <div class="col-lg-8 product-img_description">
+                        <img src="/images/products/<%=product.image%>" alt="not founded" class="product-img">
+                        <p class="product-description"><%=product.description%></p>
+                    </div>
+                    <div class="col-lg-4 product-buy_info">
+                        <div class="price-detail">
+                            <h5 class="price-info">
+                                $<%=product.price%> / <%=product.discount%>%OFF
+                            </h5>
+                            <h2 class="precio-final">
+                                Precio final
+                            </h2>
+                        </div>
+                        <div class="forma-pago">
+                            <i class="fas fa-credit-card"></i>
+                            Paga en 12 cuotas sin interes
+                        </div>
+                        
+                        <div class="forma-retiro">
+                            <i class="fas fa-store"></i>
+                            Retiro gratis en locales del vendedor
+                        </div>
+    
+                        <div class="button container">
+                            
+                            <button class="btn btn-success comprar-btn">Comprar</button>
+                            
+                            <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
+                                <button class="btn btn-success borrar-btn" type="submit">Borrar</button>
+                            </form>
+
+                            <form action="/products/edit/<%=product.id%>" method="GET">
+                                <button class="btn btn-success modificar-btn" type="submit">Modificar</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </sec>
+    </div>
+
+    <%- include("./partials/index/footer") %>
+</body>
+
+</html>
